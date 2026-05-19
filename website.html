@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>zen technology - Business Website</title>
+
+  <!-- Bootstrap CDN -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Bootstrap Icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+  <style>
+    body{
+      font-family: Arial, sans-serif;
+    }
+
+    /* Navbar */
+    .navbar{
+      background-color: #c1cad8;
+    }
+
+    .navbar .nav-link,
+    .navbar-brand{
+      color: rgb(48, 9, 147) !important;
+      font-weight: 500;
+    }
+
+    /* Hero Section */
+    .carousel-item img{
+      height: 90vh;
+      object-fit: cover;
+    }
+
+    .carousel-caption{
+      background: rgba(129, 6, 6, 0.5);
+      padding: 20px;
+      border-radius: 10px;
+    }
+
+    /* Services */
+    .service-card{
+      transition: 0.3s;
+    }
+
+    .service-card:hover{
+      transform: translateY(-5px);
+    }
+
+    /* Achievements */
+    .stats{
+      background-color: #f1f3f5;
+    }
+
+    .stat-box{
+      padding: 20px;
+    }
+
+    .stat-box h2{
+      color: #091931;
+      font-weight: bold;
+    }
+
+    /* Contact */
+    .contact-section{
+      background-color: #28a998;
+    }
+
+    /* Footer */
+    footer{
+      background-color: #87f007;
+      color: rgb(102, 136, 173);
+      text-align: center;
+      padding: 15px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- ================= NAVBAR ================= -->
+  <nav class="navbar navbar-expand-lg navbar-dark sticky-top">
+    <div class="container">
+      <a class="navbar-brand fw-bold" href="#">zen technology</a>
+
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <a class="nav-link active" href="#home">Home</a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="#services"> our Services</a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="#about">About us</a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="#contact">Contact us</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ================= HERO SECTION ================= -->
+  <section id="home">
+    <div id="heroCarousel" class="carousel slide" data-bs-ride="carousel">
+
+      <!-- Indicators -->
+      <div class="carousel-indicators">
+        <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="0" class="active"></button>
+        <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="1"></button>
+      </div>
+
+      <!-- Carousel Items -->
+      <div class="carousel-inner">
+
+        <!-- Slide 1 -->
+        <div class="carousel-item active">
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQvsIYNcOrUi1VRC4CUfjt0S5B_nBEqwqDrzw&s">
+
+          <div class="carousel-caption">
+            <h1>Grow Your Business with zen technology</h1>
+            <p>We provide innovative digital solutions for modern businesses.</p>
+            <a href="#" class="btn btn-primary">Explore</a>
+          </div>
+        </div>
+
+        <!-- Slide 2 -->
+        <div class="carousel-item">
+          <img src="data:image/jpeg;base64,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">
+
+          <div class="carousel-caption">
+            <h1>Creative & Professional Solutions</h1>
+            <p>Helping startups and companies achieve success faster.</p>
+            <a href="#" class="btn btn-warning">Learn More</a>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Controls -->
+      <button class="carousel-control-prev" type="button" data-bs-target="#heroCarousel" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon"></span>
+      </button>
+
+      <button class="carousel-control-next" type="button" data-bs-target="#heroCarousel" data-bs-slide="next">
+        <span class="carousel-control-next-icon"></span>
+      </button>
+
+    </div>
+  </section>
+
+  <!-- ================= SERVICES SECTION ================= -->
+  <section id="services" class="py-5">
+    <div class="container">
+      <div class="text-center mb-5">
+        <h2>Our Services</h2>
+        <p>We offer high quality business solutions</p>
+      </div>
+
+      <div class="row g-4">
+
+        <!-- Card 1 -->
+        <div class="col-md-4">
+          <div class="card service-card h-100 shadow">
+            <div class="card-body text-center p-4">
+              <i class="bi bi- laptop fs-1 text-primary"></i>
+              <h4 class="mt-3">Web Development</h4>
+              <p>Professional responsive websites using modern technologies and frameworks.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="col-md-4">
+          <div class="card service-card h-100 shadow">
+            <div class="card-body text-center p-4">
+              <i class="bi bi-chart-line fs-1 text-success"></i>
+              <h4 class="mt-3">Digital Marketing</h4>
+              <p>Boost your brand visibility with smart marketing and SEO strategies.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="col-md-4">
+          <div class="card service-card h-100 shadow">
+            <div class="card-body text-center p-4">
+              <i class="bi fs-1 text-danger"></i>
+              <h4 class="mt-3">App Development</h4>
+              <p>Build powerful mobile applications for Android and iOS platforms makes you genius.</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= ACHIEVEMENTS SECTION ================= -->
+  <section id="about" class="stats py-5">
+    <div class="container">
+      <div class="text-center mb-5">
+        <h2>Our Achievements</h2>
+      </div>
+
+      <div class="row text-center">
+
+        <div class="col-6 col-md-3">
+          <div class="stat-box">
+            <h2>500+</h2>
+            <p>We work with</p>
+          </div>
+        </div>
+
+        <div class="col-6 col-md-3">
+          <div class="stat-box">
+            <h2>1200+</h2>
+            <p>Projects</p>
+          </div>
+        </div>
+
+        <div class="col-6 col-md-3">
+          <div class="stat-box">
+            <h2>50+</h2>
+            <p>Awards</p>
+          </div>
+        </div>
+
+        <div class="col-6 col-md-3">
+          <div class="stat-box">
+            <h2>10+</h2>
+            <p>Experience</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= CONTACT SECTION ================= -->
+  <section id="contact" class="contact-section py-5">
+    <div class="container">
+
+      <div class="text-center mb-4">
+        <h2>Connect Us</h2>
+      </div>
+
+      <div class="row justify-content-center">
+        <div class="col-lg-6">
+
+          <form class="bg-white p-4 rounded shadow">
+
+            <div class="mb-3">
+              <label class="form-label">Name</label>
+              <input type="text" class="form-control" placeholder="NAME  IN CAPITALS">
+            </div>
+
+            <div class="mb-3">
+              <label class="form-label">Email</label>
+              <input type="email" class="form-control" placeholder="Enter your email">
+            </div>
+
+            <div class="mb-3">
+              <label class="form-label">Text free</label>
+              <textarea class="form-control" rows="4" placeholder="Enter your message"></textarea>
+            </div>
+
+            <button type="submit" class="btn btn-primary w-100">
+              Submit
+            </button>
+
+          </form>
+
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ================= FOOTER ================= -->
+  <footer>
+    <p class="mb-1">© 2026 zen Tcchnology. All Rights Reserved.</p>
+    <p class="mb-0">Made by chiru</p>
+  </footer>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>
